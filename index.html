@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROYECTO MD</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <section id="cont-global">
+        <h1>Matematica Discreta</h1>
+        <p>Desarrolladora Claudia Giron carnet 0901 -25-2457</p>
+        <hr>
+
+
+
+   
+<!--boton-->
+<div class="boton-modal">
+    <label for="btn-modal">
+        Problemas de conteo
+    </label>
+</div>
+<!--fin de boton-->
+<!--ventana modal-->
+<input type="checkbox" id="btn-modal">
+<div class="container-modal">
+    <div class="content-modal">
+        <h2>Principio de la suma y producto</h2>
+        <p>El principio de la suma se usa cuando los eventos son mutuamente excluyentes (ocurre uno u otro, no ambos), se suma el número de opciones para cada evento (m+n). El principio del producto se usa cuando los eventos ocurren en secuencia o de forma independiente, y se multiplican el número de opciones de cada evento (m x n).  </p>
+        <div class="modal-img">
+            <img src="imagenes/problemas de conteo.png" alt="">
+        </div>
+
+     <div class="botones-fila">
+        <div class="btn-cerrar">
+        <label for="btn-modal">cerrar</label>
+    </div>
+
+    <div class="btn-algoritmo">
+        <label for="btn-modalA">algoritmo</label>
+    </div>
+
+    <!-- Botón que redirige a un programa --> 
+    <div class="btn-programa"> 
+        <button onclick="proCont()">Usar programa</button>
+     </div>
+     </div>
+</div> 
+</div> 
+<!-- VENTANA MODAL A -->
+<input type="checkbox" id="btn-modalA">
+<div class="container-modalA">
+  <div class="content-modalA">
+    <h2>Algoritmo Suma y Multiplicacion </h2>
+    function proCont(){</p>
+    let num, cont, sum, multi;</p>
+    let centi='s';</p>
+    let opc;</p>
+
+    while(centi.toLowerCase()==='s'){</p>
+      alert("Menu:\n1. Sumar números\n2. Multiplicar números");</p>
+       opc=prompt("eliga una opcion (1 o 2): ");</p>
+
+        Switch(opc){
+           case'1':</p>
+            num=parseInt(prompt("¿cuantos numeros desea operar?"));</P>
+            sum=0;</P>
+            for(cont=1;cont<=num;cont++){</P>
+            let numero= parseFloat(prompt("Ingrese número" +cont+":"));</P>
+            sum=sum+numero;}</P>
+            alert("el resultado de la suma es;"+ sum);</P>
+            break;</P>
+
+            case '2':</P>
+            num=parseInt(prompt("¿cuantos numeros desea operar?"));</P>
+            multi=1;</P>
+            for(cont=1;cont<=num;cont++){</P>
+            let numero= parseFloat(prompt("Ingrese número" +cont+":"));</P>
+            multi=multi*numero;}</P>
+            alert("el resultado de la multiplicacion es;"+ multi);</P>
+            break;}</P>
+        centi=prompt("¿desea continuar? s=si n=no");
+        }
+    }</p>
+
+
+    <div class="btn-cerrarA">
+      <label for="btn-modalA">Cerrar</label>
+    </div>
+  </div>
+</div>
+<!--boton que dirije a un modal que abre la estructura del programa-->
+<!--fin de ventana modal-->
+
+
+
+
+ <!--boton3-->
+<div class="boton-modal3">
+    <label for="btn-modal3">
+        Combinaciones 
+    </label>
+</div>
+<!--fin de boton-->
+<!--ventana modal-->
+<input type="checkbox" id="btn-modal3">
+<div class="container-modal3">
+    <div class="content-modal3">
+        <h2>Combinaciones </h2>
+        <p> una combinación es una selección de elementos de un conjunto en la que el orden de los elementos no importa. A diferencia de las permutaciones, donde el orden es crucial, en las combinaciones se agrupan elementos sin importar la posición en que aparezcan. La fórmula general para calcular el número de combinaciones (nCr) al seleccionar 'r' elementos de un conjunto de 'n' es: n! / (r! * (n-r)!), donde '!' denota el factorial.  </p>
+        <div class="modal-img3">
+            <img src="imagenes/combinaciones-y-permutaciones-formulas.webp " alt="">
+        </div>
+
+        <div class="botones-fila">
+        <div class="btn-cerrar3">
+        <label for="btn-modal3">cerrar</label>
+    </div>
+
+    <div class="btn-algoritmo3">
+        <label for="btn-modalC">algoritmo</label>
+    </div>
+    <!-- Botón que redirige a otra página -->
+     <div class="btn-programa3">
+        <button  onclick="proCom()">Usar programa</button></div>
+    </div>
+    </div>
+</div>
+</div>
+<!-- VENTANA MODAL C -->
+<input type="checkbox" id="btn-modalC">
+<div class="container-modalC">
+  <div class="content-modalC">
+    <h2>Algoritmo Combinaciones</h2>
+    function proCom() {</p>
+    function factorial(n) {</p>
+        let f = 1;</p>
+        for (let i = 1; i <= n; i++) {</p>
+            f *= i;</p>
+        }
+        return f;</p>
+    }
+    function leerCombinatorio() {</p>
+        let n, k;</p>
+        do {</p>
+            n = parseInt(prompt("Ingrese el valor de n (n ≥ 1):"));</p>
+        } while (isNaN(n) || n < 1);</p>
+
+        do {</p>
+            k = parseInt(prompt(`Ingrese el valor de k (0 ≤ k ≤ ${n}):`));</p>
+        } while (isNaN(k) || k < 0 || k > n);</p>
+
+        alert(`C(${n}; ${k}) = ${n}! / [${k}! × (${n} - ${k})!]`);</p>
+        return { n, k };</p>
+    }
+
+    function combSimplific(n, k) {</p>
+        let r;</p>
+        if (k < (n - k)) {</p>
+            r = k;</p>
+        } else {</p>
+            r = n - k;</p>
+        }</p>
+
+        let numerador = [];</p>
+        let denominador = [];</p>
+        let tempN = n;</p>
+
+        for (let i = r; i >= 1; i--) {</p>
+            numerador.push(tempN);</p>
+            tempN--;</p>
+        }
+
+        for (let i = r; i >= 1; i--) {</p>
+            denominador.push(i);</p>
+        }
+
+        let numProd = numerador.reduce((a, b) => a * b, 1);</p>
+        let denProd = denominador.reduce((a, b) => a * b, 1);</p>
+        let simplificado = numProd / denProd;</p>
+
+        alert(</p>
+            `C(${n}; ${k}) = ${numerador.join(" × ")} / ${denominador.join(" × ")} = ${simplificado}`</p>
+        );</p>
+    }
+    function principalCombinaciones() {</p>
+        const { n, k } = leerCombinatorio();</p>
+        combSimplific(n, k);</p>
+        const resultado = factorial(n) / (factorial(k) * factorial(n - k));</p>
+        alert(`Resultado final: ${resultado}`);</p>
+    }</p>
+
+    principalCombinaciones();</p>
+}
+    <div class="btn-cerrarC">
+      <label for="btn-modalC">Cerrar</label>
+    </div>
+  </div>
+</div>
+<!--boton que dirije a un modal que abre la estructura del programa-->
+<!--fin de ventana modal3-->
+
+
+
+
+<!--boton4-->
+<div class="boton-modal4">
+    <label for="btn-modal4">
+        Teorema del binomio  
+    </label>
+</div>
+<!--fin de boton-->
+<!--ventana modal-->
+<input type="checkbox" id="btn-modal4">
+<div class="container-modal4">
+    <div class="content-modal4">
+        <h2>Teorema del binomio </h2>
+        <p> El teorema del binomio, o Binomio de Newton, es una fórmula que permite expandir cualquier potencia de un binomio, expresándolo como un polinomio. La fórmula general es (a + b)ⁿ = ∑ (nCk) a^(n-k) b^k, donde (nCk) son los coeficientes binomiales que corresponden a las filas del Triángulo de Pascal y se calculan con factoriales. 
+            solo que el programa a presentar lo hara de forma de triangulo de pascal es una matriz triangular de números que proporciona los coeficientes para el desarrollo de binomios. Para escribir los exponentes, se toma una fila del triángulo (cada fila corresponde a una potencia, comenzando con la fila 0 para \((a+b)^{0}\)) y se distribuyen 
+            los exponentes de la primera variable de forma descendente y los de la segunda de forma ascendente, asegurándose de que la suma de los exponentes de cada término sea igual a la potencia del binomio.
+        </p>
+        <div class="modal-img4">
+            <img src="imagenes/Teorema-del-binomio.jpg" alt="">
+        </div>
+
+        <div class="botones-fila">
+        <div class="btn-cerrar4">
+        <label for="btn-modal4">cerrar</label>
+    </div>
+    <div class="btn-algoritmo4">
+        <label for="btn-modalD">algoritmo</label>
+    </div>
+    <!-- Botón que redirige a otra página -->
+     <div class="btn-programa4">
+        <button  onclick="proTDB()">Usar programa</button></div></div>
+    </div>
+</div>
+</div>
+</div>
+<!-- VENTANA MODAL D -->
+<input type="checkbox" id="btn-modalD">
+<div class="container-modalD">
+  <div class="content-modalD">
+    <h2>Algoritmo Teorema del Binomio</h2>
+    function proTDB(){ </p>
+  let e = parseInt(prompt("Ingrese exponente:"));</p>
+  if (isNaN(e) || e < 0) {</p>
+    alert("Por favor, ingrese un número entero mayor o igual a 0");</p>
+    return;</p>
+  }
+  let resultado= "";</p>
+  for (let ei = 0; ei <= e; ei++) {</p>
+    let coef = 1;</p>
+    let fila = "";</p>
+    for (let eb = 0; eb <= ei; eb++) {</p>
+      fila += coef + " ";</p>
+      coef = (coef * (ei - eb)) / (eb + 1);</p>
+    }
+    resultado += fila+ "\n";</p>
+  }
+  alert(resultado);</p>
+}
+    <div class="btn-cerrarD">
+      <label for="btn-modalD">Cerrar</label>
+    </div>
+  </div>
+</div>
+<!--boton que dirije a un modal que abre la estructura del programa-->
+<!--fin de ventana modal4-->
+
+
+
+<!--boton5-->
+<div class="boton-modal5">
+    <label for="btn-modal5">
+        Recursividad
+    </label>
+</div>
+<!--fin de boton-->
+<!--ventana modal-->
+<input type="checkbox" id="btn-modal5">
+<div class="container-modal5">
+    <div class="content-modal5">
+        <h2>Recursividad</h2>
+        <p>Es la funcion que se llama a si misma como funcion directa o indirecta, es la técnica de definir una función o un proceso en términos de sí mismo, desglosando un problema complejo en subproblemas más pequeños y similares hasta alcanzar un caso base que se puede resolver trivialmente. </p>
+        <div class="modal-img5">
+            <img src="imagenes/modal-recursividad.jpg" alt="">
+        </div>
+
+        <div class="botones-fila">
+        <div class="btn-cerrar5">
+        <label for="btn-modal5">cerrar</label>
+    </div>
+    <div class="btn-algoritmo5">
+        <label for="btn-modalE">algoritmo</label>
+    </div>
+
+    <!-- Botón que redirige a un programa --> 
+    <div class="btn-programa5"> 
+    <button  onclick="proRecur()">Usar programa</button>
+</div> 
+        </div>
+</div> 
+</div> 
+<!-- VENTANA MODAL E -->
+<input type="checkbox" id="btn-modalE">
+<div class="container-modalE">
+  <div class="content-modalE">
+    <h2>Algoritmo Recursividad</h2>
+
+    function suma(n) {</p>
+    if (n === 1) {</p>
+        return 1; //caso base</p>
+    }</p>
+    return n + suma(n - 1); </p>
+}</p>
+function proRecur(){</p>
+    
+    alert("Este programa hace una suma recursiva")</p>
+    let n = parseInt(prompt("Ingrese el número que quieres sumar:"));</p>
+
+    
+    if (isNaN(n) || n < 1) {</p>
+        alert("Por favor ingrese un número entero positivo.");</p>
+        return;</p>
+    }</p>
+
+    alert("La suma de 1 hasta " + n + " es: " + resultado);</p>
+}</p>
+    <div class="btn-cerrarE">
+      <label for="btn-modalE">Cerrar</label>
+    </div>
+  </div>
+</div>
+<!--boton que dirije a un modal que abre la estructura del programa-->
+<!--fin de ventana modal-->
+
+
+
+  
+
+
+
+    <!--boton6-->
+<div class="boton-modal6">
+    <label for="btn-modal6">
+        Numeros Primos
+    </label>
+</div>
+<!--fin de boton-->
+<!--ventana modal-->
+<input type="checkbox" id="btn-modal6">
+<div class="container-modal6">
+    <div class="content-modal6">
+        <h2>Numeros Primos</h2>
+        <p>Los números primos son números naturales mayores que 1 que solo tienen dos divisores: el 1 y ellos mismos. Esto significa que no se pueden dividir de manera exacta por ningún otro número entero además de estos dos. Ejemplos de números primos son 2, 3, 5, 7, 11, y así sucesivamente, mientras que los números que no son primos se llaman números compuestos, como el 4 (divisible por 2) o el 6 (divisible por 2 y 3).</p>
+        <div class="modal-img6">
+            <img src="imagenes/numerosprimos.png" alt="">
+        </div>
+
+        <div class="botones-fila">
+        <div class="btn-cerrar6">
+        <label for="btn-modal6">cerrar</label>
+    </div>
+    <div class="btn-algoritmo6">
+        <label for="btn-modalF">algoritmo</label>
+    </div>
+    <!-- Botón que redirige a otra página -->
+     <div class="btn-programa6">
+        <button  onclick="Nprimo()">Usar programa</button></div>
+    </div>
+    </div>
+</div>
+</div>
+<!-- VENTANA MODAL F -->
+<input type="checkbox" id="btn-modalF">
+<div class="container-modalF">
+  <div class="content-modalF">
+    <h2>Algoritmo Numeros Primos </h2>
+
+    function Nprimo(){</p>
+  let primos = [];</p>
+
+    // Recorrer los números del 1 al 100</p>
+    for (let num = 1; num <= 100; num++) {</p>
+        let cont = 0;</p>
+
+        // Contar divisores del número actual</p>
+        for (let x = 1; x <= num; x++) {</p>
+            if (num % x === 0) {</p>
+                cont++;</p>
+            }</p>
+        }</p>
+
+        // Si tiene exactamente 2 divisores, es primo
+        if (cont === 2) {</p>
+            primos.push(num);</p>
+        }</p>
+    }</p>
+
+    alert("Los números primos son: " + primos.join(", "));
+}</p>
+    <div class="btn-cerrarF">
+      <label for="btn-modalF">Cerrar</label>
+    </div>
+  </div>
+</div>
+<!--boton que dirije a un modal que abre la estructura del programa-->
+<!--fin de ventana modal6-->
+
+
+
+ <!--boton7-->
+<div class="boton-modal7">
+    <label for="btn-modal7">
+        Divisibilidad
+    </label>
+</div>
+<!--fin de boton-->
+<!--ventana modal-->
+<input type="checkbox" id="btn-modal7">
+<div class="container-modal7">
+    <div class="content-modal7">
+        <h2>Divisibilidad</h2>
+        <p>La divisibilidad es la propiedad matemática de un número entero de ser dividido por otro número entero dando como resultado un cociente entero y un resto de cero. En otras palabras, un número "a" es divisible por un número "b" si "a" puede expresarse como el producto de "b" por otro número entero "c" (a = b * c). </p>
+        <div class="modal-img7">
+            <img src="imagenes/divisibilidad.jpg" alt="">
+        </div>
+
+        <div class="botones-fila">
+        <div class="btn-cerrar7">
+        <label for="btn-modal7">cerrar</label>
+    </div>
+    <div class="btn-algoritmo7">
+        <label for="btn-modalG">algoritmo</label>
+    </div>
+    <!-- Botón que redirige a otra página -->
+     <div class="btn-programa7">
+        <button  onclick="proDiv()">Usar programa</button></div>
+    </div>
+    </div>
+</div>
+</div>
+<!-- VENTANA MODAL G -->
+<input type="checkbox" id="btn-modalG">
+<div class="container-modalG">
+  <div class="content-modalG">
+    <h2>Algoritmo Divisibilidad</h2>
+
+    function proDiv(){</p>
+    let num = parseInt(prompt("ingrese un numero:")); </p>
+    if (isNaN(num)) {</p>
+        alert("Por favor ingrese un número válido");</p>
+        return; </p>
+    }</p>
+    alert("Analizando divisibilidad del número: " + num);</p>
+    for (let divisor = 2; divisor <= 10; divisor++) {</p>
+        if (num % divisor === 0) {</p>
+            // Si num % divisor = 0 Entonces</p>
+            if (divisor === 2) {</p>
+                alert("Es divisible en 2 porque termina o es un número par");</p>
+            } else if (divisor === 3) {</p>
+                alert("Es divisible en 3 porque la suma de sus cifras da múltiplo de 3");</p>
+            } else if (divisor === 4) {</p>
+                alert("Es divisible en 4 porque sus últimas cifras forman múltiplo de 4");</p>
+            } else if (divisor === 5) {</p>
+                alert("Es divisible en 5 porque termina en 0 o 5");</p>
+            } else if (divisor === 6) {</p>
+                alert("Es divisible en 6 porque también lo es en 2 y 3");</p>
+            } else if (divisor === 7) {</p>
+                alert("Es divisible en 7");</p>
+            } else if (divisor === 8) {</p>
+                alert("Es divisible en 8 porque sus últimas cifras forman múltiplo de 8");</p>
+            } else if (divisor === 9) {</p>
+                alert("Es divisible en 9 porque la suma de sus cifras da múltiplo de 9");</p>
+            } else if (divisor === 10) {</p>
+                alert("Es divisible en 10 porque termina en 0");}</p>
+        } else {</p>
+            alert("No es divisible en " + divisor);</p>} } }</p>
+
+    <div class="btn-cerrarG">
+      <label for="btn-modalG">Cerrar</label>
+    </div>
+  </div>
+</div>
+<!--boton que dirije a un modal que abre la estructura del programa-->
+<!--fin de ventana modal7-->
+
+
+
+
+<!--boton8-->
+<div class="boton-modal8">
+    <label for="btn-modal8">
+        Maximo Comun Divisor 
+    </label>
+</div>
+<!--fin de boton-->
+<!--ventana modal-->
+<input type="checkbox" id="btn-modal8">
+<div class="container-modal8">
+    <div class="content-modal8">
+        <h2>Maximo Comun Divisor(MCD)</h2>
+        <p>es el número entero más grande que divide exactamente a dos o más números sin dejar residuo. Para calcularlo, se descomponen los números en sus factores primos, se identifican los factores comunes a todos los números y se toman con el menor exponente. Finalmente, se multiplican estos factores comunes para obtener el MCD. </p>
+        <div class="modal-img8">
+            <img src="imagenes/MCD.webp" alt="">
+        </div>
+
+        <div class="botones-fila">
+        <div class="btn-cerrar8">
+        <label for="btn-modal8">cerrar</label>
+    </div>
+    <div class="btn-algoritmo8">
+        <label for="btn-modalH">algoritmo</label>
+    </div>
+    <!-- Botón que redirige a otra página -->
+     <div class="btn-programa8">
+        <button  onclick="proMCD()">Usar programa</button></div></div>
+    </div>
+    </div>
+</div>
+</div>
+<!-- VENTANA MODAL H -->
+<input type="checkbox" id="btn-modalH">
+<div class="container-modalH">
+  <div class="content-modalH">
+    <h2>Algoritmo Maximo Comun Divisor</h2>
+    function proMCD(){</p>
+     let n, rango, i, contador, cont_comunes, k;</p>
+    let numeros = [];</p>
+    let comunes = [];</p>
+    let es_comun;</p>
+    n = parseInt(prompt("¿Cuántos números desea ingresar?"));</p>
+    if (n > 0) {</p>
+        for (i = 0; i < n; i++) {</p>
+            numeros[i] = parseInt(prompt("Ingrese el número " + (i + 1) + ":"));}</p>
+        rango = parseInt(prompt("Ingrese hasta qué rango desea calcular los divisores:"));</p>
+        for (i = 0; i < n; i++) {</p>
+            let divisores = [];</p>
+            for (contador = 1; contador <= rango; contador++) {</p>
+                if (numeros[i] % contador === 0) {</p>
+                    divisores.push(contador);}}</p>
+            alert("Divisores de " + numeros[i] + ": " + divisores.join(" "));}</p>
+        cont_comunes = 0;</p>
+        for (contador = 1; contador <= rango; contador++) {</p>
+            es_comun = true;</p>
+            for (i = 0; i < n; i++) {</p>
+                if (numeros[i] % contador !== 0) {</p>
+                    es_comun = false;</p>
+                    break; }}</p>
+            if (es_comun) {</p>
+                comunes.push(contador);</p>
+                cont_comunes++; }}</p>
+        if (cont_comunes > 0) {</p>
+            alert("Divisores comunes encontrados: " + comunes.join(" "));</p>
+            alert("El Máximo Común Divisor (MCD) es: " + comunes[cont_comunes - 1]);</p>
+        } else {</p>
+            alert("No se encontraron divisores comunes en el rango dado.");}</p>
+    } else {</p>
+        alert("Este valor no es operable");}}</p>
+    <div class="btn-cerrarH">
+      <label for="btn-modalH">Cerrar</label>
+    </div>
+  </div>
+</div>
+<!--boton que dirije a un modal que abre la estructura del programa-->
+<!--fin de ventana modal8-->
+
+
+<!--boton9-->
+<div class="boton-modal9">
+    <label for="btn-modal9">
+        Minimo comun Multiplo (mcm)
+    </label>
+</div>
+<!--fin de boton-->
+<!--ventana modal-->
+<input type="checkbox" id="btn-modal9">
+<div class="container-modal9">
+    <div class="content-modal9">
+        <h2>Minimo comun multiplo(mcm)</h2>
+        <p>es el número positivo más pequeño que es múltiplo de dos o más números dados. Para encontrarlo, puedes enumerar los múltiplos de cada número y buscar el más pequeño que compartan, o usar la descomposición en factores primos, tomando los factores comunes y no comunes con su mayor exponente y multiplicándolos. </p>
+        <div class="modal-img9">
+            <img src="imagenes/minimo-comun-multiplo-mcm-og.webp" alt="">
+        </div>
+
+         <div class="botones-fila">
+        <div class="btn-cerrar9">
+        <label for="btn-modal9">cerrar</label>
+    </div>
+    <div class="btn-algoritmo9">
+        <label for="btn-modalI">algoritmo</label>
+    </div>
+    <!-- Botón que redirige a otra página -->
+     <div class="btn-programa9">
+        <button  onclick="promcm()">Usar programa</button></div></div>
+    </div>
+</div>
+</div>
+</div>
+<!-- VENTANA MODAL I -->
+<input type="checkbox" id="btn-modalI">
+<div class="container-modalI">
+  <div class="content-modalI">
+    <h2>Algoritmo Minimo comun multiplo</h2>
+    function promcm(){</p>
+     let n, i, j, rango, cont_comunes;</p>
+    let numeros = [];</p>
+    let comun = [];</p>
+    let valor;</p>
+    let contador;</p>
+    let es_comun;</p>
+     // Leer cantidad de números
+    n = parseInt(prompt("¿Cuántos números desea ingresar?"));</p>
+
+    if (n > 0) {</p>
+        // Leer los números</p>
+        for (i = 0; i < n; i++) {</p>
+            numeros[i] = parseInt(prompt("Ingrese el número " + (i + 1) + ":"));</p>
+        }
+        // Leer el rango hasta donde calcular múltiplos
+        rango = parseInt(prompt("Ingrese hasta qué rango desea calcular los múltiplos:"));</p>
+        // Mostrar múltiplos de cada número
+        for (i = 0; i < n; i++) {</p>
+            let multiplos = [];</p>
+            contador = 1;</p>
+            while (contador <= rango) {</p>
+                multiplos.push(numeros[i] * contador);</p>
+                contador++;</p>
+            }
+            alert("Múltiplos de " + numeros[i] + ": " + multiplos.join(" "));</p>
+        }
+        // Calcular múltiplos comunes
+        cont_comunes = 0;</p>
+        for (j = 1; j <= rango; j++) {</p>
+            valor = numeros[0] * j;</p>
+            es_comun = true;</p>
+
+            for (i = 1; i < n; i++) {</p>
+                if (valor % numeros[i] !== 0) {</p>
+                    es_comun = false;</p>
+                    break;</p>
+                }
+            }
+
+            if (es_comun) {</p>
+                comun.push(valor);</p>
+                cont_comunes++;</p>
+            }
+        }
+        // Mostrar resultados
+        if (cont_comunes > 0) {</p>
+            alert("Múltiplos comunes encontrados: " + comun.join(" "));</p>
+            alert("El Mínimo Común Múltiplo (MCM) es: " + comun[0]);</p>
+        } else {
+            alert("No se encontraron múltiplos comunes en el rango.");</p>
+        }
+    } else {</p>
+        alert("Este valor no es operable");</p>
+    }
+}
+    <div class="btn-cerrarI">
+      <label for="btn-modalI">Cerrar</label>
+    </div>
+  </div>
+</div>
+<!--boton que dirije a un modal que abre la estructura del programa-->
+<!--fin de ventana modal9-->
+
+
+<!--boton10-->
+<div class="boton-modal10">
+    <label for="btn-modal10">
+        Teorema de Euclides MCD 
+    </label>
+</div>
+<!--fin de boton-->
+<!--ventana modal-->
+<input type="checkbox" id="btn-modal10">
+<div class="container-modal10">
+    <div class="content-modal10">
+        <h2>Teorema de Euclides MCD</h2>
+        <p> El método de Euclides para el Mínimo Común Divisor (MCD) calcula el mayor número que divide a dos números dados mediante divisiones sucesivas. Se divide el número mayor entre el menor, y se repite el proceso usando el divisor y el residuo hasta que el residuo sea cero; el último divisor distinto de cero es el MCD.  </p>
+        <div class="modal-img10">
+            <img src="imagenes/TEMCD.jpg" alt="">
+        </div>
+
+        <div class="botones-fila">
+        <div class="btn-cerrar10">
+        <label for="btn-modal10">cerrar</label>
+    </div>
+     <div class="btn-algoritmo10">
+        <label for="btn-modalJ">algoritmo</label>
+    </div>
+    <!-- Botón que redirige a otra página -->
+     <div class="btn-programa10">
+        <button  onclick="proTEMCD()">Usar programa</button></div></div>
+    </div>
+</div>
+</div>
+</div>
+<!-- VENTANA MODAL J -->
+<input type="checkbox" id="btn-modalJ">
+<div class="container-modalJ">
+  <div class="content-modalJ">
+    <h2>Algoritmo Teorema de Euclides</h2>
+    function proTEMCD(){</p>
+    
+    let n, i, j, a, b, mcd, mcm;</p>
+    let opcion = '';</p>
+    let numeros = [];</p>
+    let cocientes = [];</p>
+    let residuos = [];</p>
+
+    do {
+        n = parseInt(prompt("¿Cuántos números desea ingresar? (mínimo 2):"));</p>
+        if (isNaN(n) || n < 2) {</p>
+            alert("Debe ingresar al menos dos números.");</p>
+        }
+
+        // Leer números
+        for (i = 0; i < n; i++) {</p>
+            numeros[i] = parseInt(prompt("Ingrese el número " + (i + 1) + ":"));</p>
+        }
+
+        // Calcular el MCD
+        mcd = numeros[0];</p>
+        for (i = 1; i < n; i++) {</p>
+            a = mcd;</p>
+            b = numeros[i];</p>
+            j = 0;</p>
+
+            TEMCD
+            while (b !== 0) {</p>
+                cocientes[j] = Math.floor(a / b);</p>
+                residuos[j] = a % b;</p>
+                a = b;</p>
+                b = residuos[j];</p>
+                j++;</p>
+            }
+            j--;</p>
+
+            // --- Construcción de la tabla completa ---
+            let tabla = "\n";</p>
+            
+
+            //  Cocientes
+            let lineaCocientes = "Cocientes:           ";</p>
+            for (let k = 0; k <= j; k++) {</p>
+                lineaCocientes += (cocientes[k] ?? "         ") + "        ";</p>
+            }
+            lineaCocientes += "\n";</p>
+
+            // Números
+            a = mcd;</p>
+            b = numeros[i];</p>
+            let residuo = 0;</p>
+            let lineaNumeros = "Números:     " + mcd + "   ";</p>
+            while (b !== 0) {</p>
+                residuo = a % b;</p>
+                lineaNumeros += b + "   ";</p>
+                a = b;</p>
+                b = residuo;</p>
+            }
+            lineaNumeros += "\n";</p>
+
+            // Residuos
+            let lineaResiduos = "Residuos:              ";</p>
+            for (let k = 0; k <= j; k++) {</p>
+                lineaResiduos += (residuos[k] ?? "          ") + "         ";</p>
+            }
+            lineaResiduos += "0\n";</p>
+
+            // Mostrar todo junto
+            tabla += lineaCocientes + lineaNumeros + lineaResiduos;</p>
+            tabla += "\n";</p>
+            tabla += "M.C.D = " + a + "\n";</p>
+
+            alert(tabla);</p>
+            mcd = a;</p>
+        }
+
+        alert("El M.C.D de todos los números es: " + mcd);</p>
+
+        // Calcular MCM
+        opcion = prompt("¿Desea calcular también el M.C.M? (S=si N=no): ");</p>
+        if (opcion.toUpperCase() === "S") {</p>
+            mcm = numeros[0];</p>
+            for (i = 1; i < n; i++) {</p>
+                mcm = (mcm * numeros[i]) / euclides(mcm, numeros[i]);</p>
+            }
+            alert("El m.c.m de todos los números es: " + mcm);</p>
+        }
+
+        opcion = prompt("¿Desea realizar otra operación? (S=si N=no): ");</p>
+    } while (opcion.toUpperCase() !== "N");</p>
+
+    // Función auxiliar
+    function euclides(a, b) {</p>
+        let residuo;</p>
+        while (b !== 0) {</p>
+            residuo = a % b;</p>
+            a = b;</p>
+            b = residuo;</p>
+        }
+        return a;</p>
+    }
+}</p>
+    <div class="btn-cerrarJ">
+      <label for="btn-modalJ">Cerrar</label>
+    </div>
+  </div>
+</div>
+<!--boton que dirije a un modal que abre la estructura del programa-->
+<!--fin de ventana modal10-->
+
+
+
+
+<!--boton12-->
+<div class="boton-modal12">
+    <label for="btn-modal12">
+        Teorema Fundamental de la Aritmetica
+    </label>
+</div>
+<!--fin de boton-->
+<!--ventana modal-->
+<input type="checkbox" id="btn-modal12">
+<div class="container-modal12">
+    <div class="content-modal12">
+        <h2>Teorema Fundamental de la Aritmetica </h2>
+        <p> El Teorema Fundamental de la Aritmética establece que todo número entero mayor que 1 puede ser expresado de forma única como un producto de números primos, independientemente del orden en que aparezcan los factores.</p>
+        <div class="modal-img12">
+            <img src="imagenes/TFA.jpg" alt="">
+        </div>
+        <div class="botones-fila">
+        <div class="btn-cerrar12">
+        <label for="btn-modal12">cerrar</label>
+    </div>
+    <div class="btn-algoritmo12">
+        <label for="btn-modalL">algoritmo</label>
+    </div>
+    <!-- Botón que redirige a otra página -->
+     <div class="btn-programa12">
+        <button  onclick="proTFA()">Usar programa</button></div></div>
+    </div>
+</div>
+</div>
+</div>
+<!-- VENTANA MODAL L -->
+<input type="checkbox" id="btn-modalL">
+<div class="container-modalL">
+  <div class="content-modalL">
+    <h2>Algoritmo TFA</h2>
+    function proTFA(){</p>
+    let num, x, contador, fac;</p>
+    let centi = 's';</p>
+
+    while (centi.toLowerCase() === 's') {</p>
+        num = parseInt(prompt("Ingrese un número mayor que 1:"));</p>
+
+        if (num > 1) {</p>
+            fac = num;</p>
+            let resultado = "La factorización prima de " + fac + " es: ";</p>
+            x = 2;</p>
+
+            while (num > 1) {</p>
+                contador = 0;</p>
+                while (num % x === 0) {</p>
+                    contador++;</p>
+                    num = num / x;</p>
+                }
+
+                if (contador > 0) {</p>
+                    if (contador === 1) {</p>
+                        resultado += x;</p>
+                    } else {</p>
+                        resultado += x + "^" + contador;</p>
+                    }</p>
+                    if (num > 1) {</p>
+                        resultado += " * ";</p>
+                    }</p>
+                }
+                x++;</p>
+            }
+
+            alert(resultado);</p>
+        } else {</p>
+            alert("Debes ingresar un número mayor a 1");</p>
+        }
+
+        centi = prompt("¿Desea continuar? (s = sí, n = no)");</p>
+    }
+}
+    <div class="btn-cerrarL">
+      <label for="btn-modalL">Cerrar</label>
+    </div>
+  </div>
+</div>
+<!--boton que dirije a un modal que abre la estructura del programa-->
+<!--fin de ventana modal11-->
+
+<!-- Botón que redirige a otra página -->
+<!--boton-->
+ 
+<div class="btn-Grafos">
+    <a class="btn" href="/grafos.html">Grafos</a></div>
+<!--fin de boton-->
+
+
+    </section>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+    

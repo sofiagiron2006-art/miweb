@@ -1,0 +1,254 @@
+
+  
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+     font-family: "Oswald", sans-serif;
+     margin:0;
+     padding:0;
+}
+
+html, body {
+  height: 100%;
+  background-image: url('../imagenes/fondo.jpg'); /* ✅ ruta correcta */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #013b1a; /* respaldo verde oscuro si no carga la imagen */
+}
+
+/* Contenedor del contenido */
+#cont-global {
+  width: 90%;
+  max-width: 920px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 50px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.7); /* semitransparente para ver el pizarrón */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  
+}
+
+
+h1{
+    color:#737373;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+p{
+    color:#020202;
+    font-size: 15px;
+}
+
+hr{
+    margin:40px auto;
+    width:100px ;
+}
+
+.botones-fila {
+    display: flex;
+    gap: 10px; /* espacio entre botones */
+    justify-content: flex-end; /* alinearlos a la derecha */
+    margin-top: 5px;
+}
+
+.botones-fila .btn-cerrar,
+.botones-fila .btn-programa {
+    width: auto; /* que no ocupen todo el ancho */
+}
+
+
+
+
+/*:::boton-modal:::*/
+.boton-modal,.boton-modalA,.boton-modal2,.boton-modalB,.boton-modal3,.boton-modalC,.boton-modal4,.boton-modalD,
+.boton-modal5,.boton-modalE,.boton-modal6,.boton-modalF,.boton-modal7,.boton-modalG,.boton-modal8,.boton-modalH,
+.boton-modal9,.boton-modalI,.boton-modal10,.boton-modalJ,.boton-modal11,.boton-modalK,.boton-modal12,.boton-modalL{
+    padding:20px;
+    background-color:#fff;
+    
+}
+
+.boton-modal label,.boton-modalA label,.boton-modal2 label,.boton-modalB label,.boton-modal3 label,.boton-modalC label,.boton-modal4 label,.boton-modalD label,
+.boton-modal5 label,.boton-modalE label,.boton-modal6 label,.boton-modalF label,.boton-modal7 label,.boton-modalG label,.boton-modal8 label,.boton-modalH label,
+.boton-modal9 label,.boton-modalI label,.boton-modal10 label,.boton-modalJ label,.boton-modal11 label,.boton-modalK label,.boton-modal12 label,.boton-modalL label{
+    padding:10px 15px;
+    background-color:#5488a3;
+    color:#fff;
+    border-radius:4px;
+    cursor:pointer;
+    transition:all 300ms ease;
+}
+.boton-modal label:hover,.boton-modalA label:hover,.boton-modal2 label:hover,.boton-modalB label:hover,.boton-modal3 label:hover,.boton-modalC label:hover,.boton-modal4 label:hover,.boton-modalD label:hover,
+.boton-modal5 label:hover,.boton-modalE label:hover,.boton-modal6 label:hover,.boton-modalF label:hover,.boton-modal7 label:hover,.boton-modalG label:hover,.boton-modal8 label:hover,.boton-modalH label:hover,
+.boton-modal9 label:hover,.boton-modalI label:hover,.boton-modal10 label:hover,.boton-modalJ label:hover,.boton-modal11 label:hover,.boton-modalK label:hover,.boton-modal12 label:hover,.boton-modalL label:hover{
+    background-color: #5488a3;
+}
+/*:::fin boton.modal:::*/
+/*:::ventana modal:::*/
+#btn-modal,#btn-modalA,#btn-modal2,#btn-modalB,#btn-modal3,#btn-modalC,#btn-modal4,#btn-modalD,
+#btn-modal5,#btn-modalE,#btn-modal6,#btn-modalF,#btn-modal7,#btn-modalG,#btn-modal8,#btn-modalH,
+#btn-modal9,#btn-modalI,#btn-modal10,#btn-modalJ,#btn-modal11,#btn-modalK,#btn-modal12,#btn-modalL{
+    display:none;
+}
+.container-modal,.container-modalA,.container-modal2,.container-modalB,.container-modal3,.container-modalC,.container-modal4,.container-modalD,
+.container-modal5,.container-modalE,.container-modal6,.container-modalF,.container-modal7,.container-modalG,.container-modal8,.container-modalH,
+.container-modal9,.container-modalI,.container-modal10,.container-modalJ,.container-modal11,.container-modalK,.container-modal12,.container-modalL{
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    position: fixed;
+    top:0; left:0;
+    background-color:rgba(144,148,150,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+#btn-modal:checked~ .container-modal,#btn-modalA:checked~ .container-modalA,#btn-modal2:checked~ .container-modal2,#btn-modalB:checked~ .container-modalB,#btn-modal3:checked~ .container-modal3,#btn-modalC:checked~ .container-modalC,#btn-modal4:checked~ .container-modal4,#btn-modalD:checked~ .container-modalD,
+#btn-modal5:checked~ .container-modal5,#btn-modalE:checked~ .container-modalE,#btn-modal6:checked~ .container-modal6,#btn-modalF:checked~ .container-modalF,#btn-modal7:checked~ .container-modal7,#btn-modalG:checked~ .container-modalG,#btn-modal8:checked~ .container-modal8,#btn-modalH:checked~ .container-modalH,
+#btn-modal9:checked~ .container-modal9,#btn-modalI:checked~ .container-modalI,#btn-modal10:checked~ .container-modal10,#btn-modalJ:checked~ .container-modalJ,#btn-modal11:checked~ .container-modal11,#btn-modalK:checked~ .container-modalK,#btn-modal12:checked~ .container-modal12,#btn-modalL:checked~ .container-modalL{
+    display: flex;
+}
+.content-modal,.content-modalA,.content-modal2,.content-modalB,.content-modal3,.content-modalC,.content-modal4,.content-modalD,
+.content-modal5,.content-modalE,.content-modal6,.content-modalF,.content-modal7,.content-modalG,.content-modal8,.content-modalH,
+.content-modal9,.content-modalI,.content-modal10,.content-modalJ,.content-modal11,.content-modalK,.content-modal12,.content-modalL{
+    width: 90%;
+    max-width: 600px;
+     max-height: 80vh;
+     overflow-y: auto;
+    padding: 20px;
+    background-color:#fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.modal-img,.modal-img2,.modal-img3,.modal-img4,
+.modal-img5,.modal-img6,.modal-img7,.modal-img8,
+.modal-img9,.modal-img10,.modal-img11,.modal-img12{
+    width: 100%;
+}
+.modal-img img,.modal-img2 img,.modal-img3 img,.modal-img4 img,
+.modal-img5 img,.modal-img6 img,.modal-img7 img,.modal-img8 img,
+.modal-img9 img,.modal-img10 img,.modal-img11 img,.modal-img12 img{
+    width: 70%;
+    height: 50%;
+    object-fit: contain;
+    border-radius: 50px;
+}
+
+.content-modal .btn-cerrar,.content-modalA .btn-cerrarA,.content-modal2 .btn-cerrar2,.content-modalB .btn-cerrarB,.content-modal3 .btn-cerrar3,.content-modalC .btn-cerrarC,.content-modal4 .btn-cerrar4,.content-modalD .btn-cerrarD,
+.content-modal5 .btn-cerrar5,.content-modalE .btn-cerrarE,.content-modal6 .btn-cerrar6,.content-modalF .btn-cerrarF,.content-modal7 .btn-cerrar7,.content-modalG .btn-cerrarG,.content-modal8 .btn-cerrar8,.content-modalH .btn-cerrarH,
+.content-modal9 .btn-cerrar9,.content-modalI .btn-cerrarI,.content-modal10 .btn-cerrar10,.content-modalJ .btn-cerrarJ,.content-modal11 .btn-cerrar11,.content-modalK .btn-cerrarK,.content-modal12 .btn-cerrar12,.content-modalL .btn-cerrarL {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+.content-modal .btn-cerrar label,.content-modalA .btn-cerrarA label,.content-modal2 .btn-cerrar2 label,.content-modalB .btn-cerrarB label,.content-modal3 .btn-cerrar3 label,.content-modalC .btn-cerrarC label,.content-modal4 .btn-cerrar4 label,.content-modalD .btn-cerrarD label,
+.content-modal5 .btn-cerrar5 label,.content-modalE .btn-cerrarE label,.content-modal6 .btn-cerrar6 label,.content-modalF .btn-cerrarF label,.content-modal7 .btn-cerrar7 label,.content-modalG .btn-cerrarG label,.content-modal8 .btn-cerrar8 label,.content-modalH .btn-cerrarH label,
+.content-modal9 .btn-cerrar9 label,.content-modalI .btn-cerrarI label,.content-modal10 .btn-cerrar10 label,.content-modalJ .btn-cerrarJ label,.content-modal11 .btn-cerrar11 label,.content-modalK .btn-cerrarK label,.content-modal12 .btn-cerrar12 label,.content-modalL .btn-cerrarL label{
+    padding: 7px 10px;
+    background-color:#5488a3;
+    color:#fff;
+    border-radius:4px;
+    cursor:pointer;
+    transition:all 300ms ease;
+}
+
+.content-modal .btn-cerrar label:hover,.content-modalA .btn-cerrarA label:hover,.content-modal2 .btn-cerrar2 label:hover,.content-modalB .btn-cerrarB label:hover,.content-modal3 .btn-cerrar3 label:hover,.content-modalC .btn-cerrarC label:hover,
+.content-modal4 .btn-cerrar4 label:hover,.content-modalD .btn-cerrarD label:hover,.content-modal5 .btn-cerrar5 label:hover,.content-modalE .btn-cerrarE label:hover,.content-modal6 .btn-cerrar6 label:hover,.content-modalF .btn-cerrarF label:hover,
+.content-modal7 .btn-cerrar7 label:hover,.content-modalG .btn-cerrarG label:hover,.content-modal8 .btn-cerrar8 label:hover,.content-modalH .btn-cerrarH label:hover,.content-modal9 .btn-cerrar9 label:hover,.content-modalI .btn-cerrarI label:hover,
+.content-modal10 .btn-cerrar10 label:hover,.content-modalJ .btn-cerrarJ label:hover,.content-modal11 .btn-cerrar11 label:hover,.content-modalK .btn-cerrarK label:hover,.content-modal12 .btn-cerrar12 label:hover,.content-modalL .btn-cerrarL label:hover {
+    background-color: #185E83;
+}
+
+
+
+
+
+.content-modal .btn-algoritmo,.content-modal2 .btn-algoritmo2,.content-modal3 .btn-algoritmo3,.content-modal4 .btn-algoritmo4, 
+.content-modal5 .btn-algoritmo5,.content-modal6 .btn-algoritmo6,.content-modal7 .btn-algoritmo7,.content-modal8 .btn-algoritmo8,.content-modal9 .btn-algoritmo9,
+.content-modal10 .btn-algoritmo10,.content-modal11 .btn-algoritmo11,.content-modal12 .btn-algoritmo12{
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+.content-modal .btn-algoritmo label,.content-modal2 .btn-algoritmo2 label,.content-modal3 .btn-algoritmo3 label,.content-modal4 .btn-algoritmo4 label,
+.content-modal5 .btn-algoritmo5 label,.content-modal6 .btn-algoritmo6 label,.content-modal7 .btn-algoritmo7 label,.content-modal8 .btn-algoritmo8 label,
+.content-modal9 .btn-algoritmo9 label,.content-modal10 .btn-algoritmo10 label,.content-modal11 .btn-algoritmo11 label,.content-modal12 .btn-algoritmo12 label{
+    padding: 7px 10px;
+    background-color:#5488a3;
+    color:#fff;
+    border-radius:4px;
+    cursor:pointer;
+    transition:all 300ms ease;
+}
+
+.content-modal .btn-algoritmo label:hover,.content-modal2 .btn-algoritmo2 label:hover,.content-modal3 .btn-algoritmo3 label:hover,.content-modal4 .btn-algoritmo4 label:hover, 
+.content-modal5 .btn-algoritmo5 label:hover,.content-modal6 .btn-algoritmo6 label:hover,.content-modal7 .btn-algoritmo7 label:hover,.content-modal8 .btn-algoritmo8 label:hover,
+.content-modal8 .btn-algoritmo8 label:hover,.content-modal9 .btn-algoritmo9 label:hover,.content-modal10 .btn-algoritmo10 label:hover,.content-modal11 .btn-algoritmo11 label:hover,.content-modal12 .btn-algoritmo12 label:hover{
+    background-color: #185E83;
+}
+
+
+
+
+
+/*::: Botón que redirige a un programa :::*/
+.content-modal .btn-programa,.content-modal2 .btn-programa2,.content-modal3 .btn-programa3,.content-modal4 .btn-programa4,
+.content-modal5 .btn-programa5,.content-modal6 .btn-programa6,.content-modal7 .btn-programa7,.content-modal8 .btn-programa8,
+.content-modal9 .btn-programa9,.content-modal10 .btn-programa10,.content-modal11 .btn-programa11,.content-modal12 .btn-programa12 {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+.content-modal .btn-programa button,.content-modal2 .btn-programa2 button,.content-modal3 .btn-programa3 button,.content-modal4 .btn-programa4 button,
+.content-modal5 .btn-programa5 button,.content-modal6 .btn-programa6 button,.content-modal7 .btn-programa7 button,.content-modal8 .btn-programa8 button,
+.content-modal9 .btn-programa9 button,.content-modal10 .btn-programa10 button,.content-modal11 .btn-programa11 button,.content-modal12 .btn-programa12 button{
+    padding: 7px 10px;
+    background-color:#5488a3;
+    color:#fff;
+    border-radius:4px;
+    cursor:pointer;
+    transition:all 300ms ease;
+}
+.content-modal .btn-programa button:hover,.content-modal2 .btn-programa2 button:hover,.content-modal3 .btn-programa3 button:hover,
+.content-modal4 .btn-programa4 button:hover,.content-modal5 .btn-programa5 button:hover,.content-modal6 .btn-programa6 button:hover,
+.content-modal7 .btn-programa7 button:hover,.content-modal8 .btn-programa8 button:hover,.content-modal9 .btn-programa9 button:hover,
+.content-modal10 .btn-programa10 button:hover,.content-modal11 .btn-programa11 button:hover,.content-modal12 .btn-programa12 button:hover {
+    background-color: #234eb2;
+}
+/*:::fin ventana modal:::*/
+
+/*::: Botón que redirige a otra página:::*/
+ /*:::boton:::*/
+.btn-Grafos{
+    padding:40px;
+    background-color:#fff;
+}
+
+.btn-Grafos a{
+    padding:10px 15px;
+    background-color:#5488a3;
+    color:#fff;
+    border-radius:4px;
+    cursor:pointer;
+    transition:all 300ms ease;
+}
+.btn-Grafos a:hover{
+    background-color: #5488a3;
+}
+/*:::fin boton:::*/
+
+
+
+

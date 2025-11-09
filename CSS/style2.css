@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+     font-family: "Oswald", sans-serif;
+     margin:0;
+     padding:0;
+}
+
+html, body {
+  height: 100%;
+  background-image: url('../imagenes/fondo.jpg'); /* ✅ ruta correcta */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #013b1a; /* respaldo verde oscuro si no carga la imagen */
+}
+
+/* Contenedor del contenido */
+#cont-global {
+  width: 90%;
+  max-width: 920px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 50px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.7); /* semitransparente para ver el pizarrón */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  color: #fff;
+  padding:40px;
+    background-color:#fff;
+
+}
+
+
+h1{
+    color:#737373;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+h2{
+    color:#737373;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+h3{
+    color:#737373;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+}
+
+h4{
+    color:#737373;
+    font-size: 18px;
+    font-weight: 700;
+    
+}
+
+p{
+    color:#737373;
+    font-size: 15px;
+    text-align: left;
+}
+
+hr{
+    margin:40px auto;
+    width:100px ;
+}
+
+/*::: Botón que redirige a otra página:::*/
+ /*:::boton:::*/
+.btn-Regresar {
+    padding:40px;
+    background-color:#fff;
+}
+
+.btn-Regresar a{
+    padding:10px 15px;
+    background-color:#5488a3;
+    color:#fff;
+    border-radius:4px;
+    cursor:pointer;
+    transition:all 300ms ease;
+}
+.btn-Regresar a:hover{
+    background-color: #5488a3;
+}
+/*:::fin boton:::*/

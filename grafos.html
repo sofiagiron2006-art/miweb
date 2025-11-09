@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROYECTO MD</title>
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+    <section id="cont-global">
+    
+        <h1>Matematica Discreta</h1>
+        <h4>Desarrolladora Claudia Giron carnet 0901 -25-2457</h4>
+        <hr>
+    
+    <h2>Grafos</h2>
+    <p> Son estructuras de datos no lineales.
+Cada elemento puede tener cero o más
+sucesores y cero o más predecesores.
+Estas formados por nodos llamados vértices
+y por arcos llamados aristas.
+</p>
+
+<h3>Conceptos Generales</h3>
+<p>• Vértices: Los vértices representan
+información.</p>
+<p>• Aristas: Las aristas son las relaciones
+entre dicha información(vertices).</p>
+<p>• Vértices Adyacentes: Vértices unidos en
+un arco(arista).</p>
+<p>• Grado de un vértice: Es el total de aristas que tiene un vértice.</p>
+<p>• Lazo o bucle: Es una arista que tiene en ambos extremos el mismo
+vértice.</p>
+
+<p>Camino: Esta formado por todas las aristas que deben recorrerse para
+llegar del origen al destino.</p>
+<p>• Camino cerrado: Si el vértice origen es igual al vértice destino.</p>
+<p>• Camino simple: Si todos los vértices, con excepción del origen y destino, son
+distintos. El primero y el ultimo vértice de un camino simple pueden ser iguales.</p>
+<p>• Ciclo: Es un camino simple cerrado de longitud mayor o igual a tres.</p>
+
+<br>
+<p>De acuerdo a sus características, las graficas reciben distintos
+nombres:
+<p>• Gráfica conexa: Es aquella en la cual existe
+un camino simple entre cualquiera de sus nodos.</p>
+<p>• Gráfica árbol: Es una grafica conexa sin ciclos.</p>
+<p>• Gráfica completa: Si cada uno de sus vértices
+son adyacentes a todos los vértices de la grafica.</p>
+
+<p>• Gráfica etiquetada: Si sus aristas tiene
+asociado un valor.</p>
+<p>• Multigráfica: Si al menos dos de sus vértices
+están unidos entre si por dos aristas llamadas
+aristas paralelas o múltiples.</p>
+<p>• Subgráfica: Esta formada por un subconjunto
+de vertices y de aristas de una grafica dada.</p>
+
+
+<p>Graficas dirigidas</p>
+<p>• Las gráficas dirigidas o digráficas son
+aquellas cuyas aristas siguen cierta
+dirección. En este caso, cada arista
+a= (V1 , V2) recibe el nombre de arco y se
+representa con la notación V1 -> V2.</p>
+<p>• V1 es el vértice origen o punto inicial y V2
+es el vértice destino o punto terminal del
+arco.</p>
+
+<h3>Representación de una digráfica</h3>
+<p>• Digráficas son estructuras de datos
+abstractas (como las pilas y colas).</p>
+<p>• Para su representación utilizaremos algunas
+de las estructuras de datos ya estudiadas,
+como son las listas de adyacencia y las
+matrices de adyacencia.</p>
+<p>• Esta formada por una lista de listas. Es decir cada nodo de la lista
+representa un vértice y además de la información propia del vértice
+se almacena una lista de los vértices adyacentes.</p>
+<h3>Listas de adyacencia:</h3>
+<p>• Esta formada por una lista de listas. Es decir cada nodo de la lista
+representa un vértice y además de la información propia del vértice
+se almacena una lista de los vértices adyacentes.</p>
+
+<h3>Matriz de adyacencia:</h3>
+<p>• Es una matriz de números enteros, donde las filas y columnas
+representan a los vértices de la digráfica.</p>
+<p>• En la posición i , j se asigna un 1 si existe un arco del vértice i al vértice
+j. En caso contrario se asigna un cero.</p>
+<h3>Matriz de costo o Matriz de distancias:</h3>
+<p>• La diferencia es que en lugar del uno se asignan la etiqueta o el
+costo del arco correspondiente.</p>
+<h3>Recorrido de las graficas dirigidas</h3>
+<p>• Existen métodos para determinar la existencia o
+no de caminos entre los vértices de las graficas,
+los mas utilizados son:</p>
+
+<!-- Botón que redirige a otra página -->
+<!--boton-->
+        <div class="btn-Regresar">
+        <a class="btn" href="/index.html">Regresar</a></div>
+<!--fin de boton-->
+    
+      </section>
+</body>
+</html>
